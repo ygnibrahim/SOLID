@@ -22,10 +22,15 @@ using static Solid.App.OCPGood.OCPGood;
 //Console.WriteLine($"High Salary: {ocp.Calculate(1000, new ManagerCalculate())} ");
 
 
-BasePhone obj=new IPhone();
+//BasePhone obj=new IPhone();
 
-obj.TakePhoto();
-obj.Call();
+//obj.TakePhoto();
+//obj.Call();
 
-BasePhone obj2 = new Nokia();
-obj2.Call();
+//BasePhone obj2 = new Nokia();
+//obj2.Call();
+
+
+ var ProductService  = new ProductService(new ProductRepositoryFromOracle());
+
+ProductService.GetAll().ForEach(x=> Console.WriteLine(x));
